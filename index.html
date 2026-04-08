@@ -4,188 +4,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdul Rizal - Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class' }</script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-rose-50 dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300 pb-24">
+<body>
 
-  <!-- HERO -->
-  <section class="flex flex-col items-center pt-12 pb-8 px-4">
-    <div class="w-24 h-24 rounded-full bg-pink-500 flex items-center justify-center mb-4 shadow-lg">
-      <span class="text-white text-3xl font-bold">AR</span>
-    </div>
-    <h1 class="text-2xl font-bold">Abdul Rizal</h1>
-    <p class="text-pink-500 font-medium mt-1" data-id="role">Sistem Informasi · Software Engineering Enthusiast</p>
-    <p class="text-gray-500 dark:text-gray-400 text-sm text-center mt-3 max-w-sm" data-id="bio">
-      Sangat semangat untuk belajar Software Engineering dan terus berkembang di dunia teknologi.
-    </p>
-    <a href="mailto:abdulrizalsy.jobportal@gmail.com"
-      class="mt-4 text-sm text-pink-500 hover:underline">abdulrizalsy.jobportal@gmail.com</a>
-  </section>
+  <main>
 
-  <div class="max-w-lg mx-auto px-4 space-y-6">
+    <!-- HERO CARD -->
+    <section class="card" id="heroCard">
+      <h1>Abdul Rizal</h1>
+      <p class="role" data-id="role">Sistem Informasi · Vibe Coding</p>
+    </section>
 
     <!-- SKILLS -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-5">
-      <h2 class="text-lg font-bold text-pink-500 mb-3" data-id="skills-title">Keahlian</h2>
-      <div class="flex flex-wrap gap-2">
-        <span class="bg-rose-100 dark:bg-rose-900 text-rose-600 dark:text-rose-300 text-xs font-medium px-3 py-1 rounded-full">Excel Intermediate</span>
-        <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 text-xs font-medium px-3 py-1 rounded-full">System Maintenance</span>
-        <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 text-xs font-medium px-3 py-1 rounded-full">Hardware & Software Troubleshooting</span>
-        <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 text-xs font-medium px-3 py-1 rounded-full">Warehouse Management System</span>
-        <span class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 text-xs font-medium px-3 py-1 rounded-full">Stock Control</span>
+    <section class="card" id="skillsCard">
+      <h2 data-id="skills-title">Keahlian</h2>
+      <div class="card-body">
+        <div class="tags">
+          <span class="tag">Excel Intermediate</span>
+          <span class="tag">System Maintenance</span>
+          <span class="tag">Hardware & Software Troubleshooting</span>
+          <span class="tag">Warehouse Management System</span>
+          <span class="tag">Stock Control</span>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- PENGALAMAN KERJA -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-5">
-      <h2 class="text-lg font-bold text-pink-500 mb-4" data-id="exp-title">Pengalaman Kerja</h2>
+    <section class="card" id="expCard">
+      <h2 data-id="exp-title">Pengalaman Kerja</h2>
+      <div class="timeline">
 
-      <div class="border-l-2 border-pink-300 pl-4 space-y-5">
-
-        <div>
-          <p class="text-xs text-gray-400" data-id="exp2-date">Jan 2019 – Agu 2019</p>
-          <h3 class="font-semibold" data-id="exp2-role">Administrator</h3>
-          <p class="text-sm text-pink-500">RT RW Net</p>
-          <ul class="text-sm text-gray-500 dark:text-gray-400 mt-2 space-y-1 list-disc list-inside" data-id="exp2-desc">
-            <li>Menangani pemeliharaan sistem jaringan</li>
-            <li>Memperbaiki masalah hardware dan software</li>
-            <li>Memastikan seluruh operasional IT berjalan lancar setiap hari</li>
-          </ul>
+        <div class="timeline-item">
+          <div class="dropdown-toggle">
+            <div>
+              <h3 data-id="exp2-role">Administrator</h3>
+              <p class="company">RT RW Net</p>
+            </div>
+            <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="dropdown-body">
+            <p class="date" data-id="exp2-date">Jan 2019 – Agu 2019</p>
+            <ul data-id="exp2-desc">
+              <li>Menangani pemeliharaan sistem jaringan</li>
+              <li>Memperbaiki masalah hardware dan software</li>
+              <li>Memastikan seluruh operasional IT berjalan lancar setiap hari</li>
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <p class="text-xs text-gray-400" data-id="exp1-date">Sep 2019 – Jul 2025</p>
-          <h3 class="font-semibold" data-id="exp1-role">Warehouse System Specialist</h3>
-          <p class="text-sm text-pink-500">PT Kedaung Oriental Porcelain Industry</p>
-          <ul class="text-sm text-gray-500 dark:text-gray-400 mt-2 space-y-1 list-disc list-inside" data-id="exp1-desc">
-            <li>Mengontrol stok aktual vs stok sistem</li>
-            <li>Pemeliharaan dan pembaruan sistem stok secara berkala</li>
-            <li>Memperbarui sistem sesuai kebutuhan performa perusahaan</li>
-            <li>Mengontrol penerimaan barang dan transfer stok ke setiap produksi</li>
-          </ul>
+        <div class="timeline-item">
+          <div class="dropdown-toggle">
+            <div>
+              <h3 data-id="exp1-role">Warehouse System Specialist</h3>
+              <p class="company">PT Kedaung Oriental Porcelain Industry</p>
+            </div>
+            <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="dropdown-body">
+            <p class="date" data-id="exp1-date">Sep 2019 – Jul 2025</p>
+            <ul data-id="exp1-desc">
+              <li>Mengontrol stok aktual vs stok sistem</li>
+              <li>Pemeliharaan dan pembaruan sistem stok secara berkala</li>
+              <li>Memperbarui sistem sesuai kebutuhan performa perusahaan</li>
+              <li>Mengontrol penerimaan barang dan transfer stok ke setiap produksi</li>
+            </ul>
+          </div>
         </div>
 
       </div>
-    </div>
-
-    <!-- PENDIDIKAN -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-5">
-      <h2 class="text-lg font-bold text-pink-500 mb-3" data-id="edu-title">Pendidikan</h2>
-      <div class="border-l-2 border-pink-300 pl-4">
-        <p class="text-xs text-gray-400">2020 – 2024</p>
-        <h3 class="font-semibold" data-id="edu-name">Universitas Insan Pembangunan Indonesia</h3>
-        <p class="text-sm text-pink-500" data-id="edu-major">Fakultas Ilmu Komputer · Sistem Informasi</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1" data-id="edu-gpa">IPK 3.32 / 4.00</p>
-      </div>
-    </div>
+    </section>
 
     <!-- PROJECT -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-5">
-      <h2 class="text-lg font-bold text-pink-500 mb-3" data-id="proj-title">Project</h2>
-      <div class="border border-pink-200 dark:border-pink-800 rounded-xl p-4">
-        <h3 class="font-semibold" data-id="proj1-name">Testing Implementasi Sistem Data Karyawan</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1" data-id="proj1-desc">
-          Tugas kelompok — pengujian dan implementasi sistem manajemen data karyawan.
-        </p>
-        <a href="https://github.com/rizalsih/testing-implementasi-sistem" target="_blank"
-          class="mt-3 inline-block text-sm bg-pink-500 hover:bg-pink-600 text-white px-4 py-1.5 rounded-full transition">
-          Lihat di GitHub
-        </a>
+    <section class="card" id="projCard">
+      <h2 data-id="proj-title">Project</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="dropdown-toggle">
+            <div>
+              <h3 data-id="proj1-name">Testing Implementasi Sistem Data Karyawan</h3>
+            </div>
+            <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="dropdown-body">
+            <p class="subtext" data-id="proj1-desc">Tugas kelompok — pengujian dan implementasi sistem manajemen data karyawan.</p>
+            <a href="https://github.com/rizalsih/testing-implementasi-sistem" target="_blank" class="btn-link">Lihat</a>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="dropdown-toggle">
+            <div>
+              <h3>Life Dashboard</h3>
+            </div>
+            <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="dropdown-body">
+            <p class="subtext">Dashboard produktivitas — focus timer, to-do list, dan quick links.</p>
+            <a href="https://rizalsih.github.io/CodingCamp-06Apr26-abdulrizalsubagja/" target="_blank" class="btn-link">Lihat</a>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
 
     <!-- KONTAK -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-5">
-      <h2 class="text-lg font-bold text-pink-500 mb-3" data-id="contact-title">Kontak</h2>
-      <div class="space-y-2 text-sm">
-        <a href="mailto:abdulrizalsy.jobportal@gmail.com" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-pink-500">
-          <span>📧</span> abdulrizalsy.jobportal@gmail.com
-        </a>
-        <a href="https://github.com/rizalsih" target="_blank" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-pink-500">
-          <span>🐙</span> github.com/rizalsih
-        </a>
+    <section class="card" id="contactCard">
+      <h2 data-id="contact-title">Kontak</h2>
+      <div class="card-body">
+        <div class="contact-list">
+          <a href="mailto:abdulrizalsy.jobportal@gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            abdulrizalsy.jobportal@gmail.com
+          </a>
+          <a href="https://github.com/rizalsih" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            github.com/rizalsih
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
 
-  </div>
+  </main>
 
-  <!-- BOTTOM BAR (Dark Mode + Translate) -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-t border-t border-rose-100 dark:border-gray-700 flex justify-center gap-4 py-3 px-4">
-    <button onclick="toggleDark()" id="darkBtn"
-      class="flex items-center gap-2 bg-pink-500 hover:bg-pink-600 text-white text-sm font-medium px-5 py-2 rounded-full transition">
-      🌙 <span id="darkLabel">Dark Mode</span>
-    </button>
-    <button onclick="toggleLang()" id="langBtn"
-      class="flex items-center gap-2 border border-pink-500 text-pink-500 hover:bg-pink-50 dark:hover:bg-gray-700 text-sm font-medium px-5 py-2 rounded-full transition">
-      🌐 <span id="langLabel">English</span>
-    </button>
-  </div>
+  <!-- FIXED FOOTER -->
+  <footer>
+    <button id="darkToggle" title="Toggle dark mode" class="nav-btn"></button>
+    <button id="langToggle" title="Toggle language" class="nav-btn">🌐</button>
+  </footer>
 
-  <script>
-    let isDark = false;
-    let isEn = false;
-
-    function toggleDark() {
-      isDark = !isDark;
-      document.getElementById('html').classList.toggle('dark', isDark);
-      document.getElementById('darkLabel').textContent = isDark ? 'Light Mode' : 'Dark Mode';
-      document.querySelector('#darkBtn').innerHTML = (isDark ? '☀️' : '🌙') + ' <span id="darkLabel">' + (isDark ? 'Light Mode' : 'Dark Mode') + '</span>';
-    }
-
-    const content = {
-      id: {
-        'role': 'Sistem Informasi · Software Engineering Enthusiast',
-        'bio': 'Sangat semangat untuk belajar Software Engineering dan terus berkembang di dunia teknologi.',
-        'skills-title': 'Keahlian',
-        'exp-title': 'Pengalaman Kerja',
-        'exp1-date': 'Sep 2019 – Jul 2025',
-        'exp1-role': 'Warehouse System Specialist',
-        'exp1-desc': '<li>Mengontrol stok aktual vs stok sistem</li><li>Pemeliharaan dan pembaruan sistem stok secara berkala</li><li>Memperbarui sistem sesuai kebutuhan performa perusahaan</li><li>Mengontrol penerimaan barang dan transfer stok ke setiap produksi</li>',
-        'exp2-date': 'Jan 2019 – Agu 2019',
-        'exp2-role': 'Administrator',
-        'exp2-desc': '<li>Menangani pemeliharaan sistem jaringan</li><li>Memperbaiki masalah hardware dan software</li><li>Memastikan seluruh operasional IT berjalan lancar setiap hari</li>',
-        'proj-title': 'Project',
-        'proj1-name': 'Testing Implementasi Sistem Data Karyawan',
-        'proj1-desc': 'Tugas kelompok — pengujian dan implementasi sistem manajemen data karyawan.',
-        'contact-title': 'Kontak',
-        'edu-title': 'Pendidikan',
-        'edu-name': 'Universitas Insan Pembangunan Indonesia',
-        'edu-major': 'Fakultas Ilmu Komputer · Sistem Informasi',
-        'edu-gpa': 'IPK 3.32 / 4.00',
-      },
-      en: {
-        'role': 'Information Systems · Software Engineering Enthusiast',
-        'bio': 'Highly enthusiastic about learning Software Engineering and continuously growing in the tech industry.',
-        'skills-title': 'Skills',
-        'exp-title': 'Work Experience',
-        'exp1-date': 'Sep 2019 – Jul 2025',
-        'exp1-role': 'Warehouse System Specialist',
-        'exp1-desc': '<li>Controlled actual stock vs system stock</li><li>Quarterly system stock maintenance and updates</li><li>Updated system based on company performance needs</li><li>Controlled goods receiving and stock transfers to each production unit</li>',
-        'exp2-date': 'Jan 2019 – Aug 2019',
-        'exp2-role': 'Administrator',
-        'exp2-desc': '<li>Handled network system maintenance</li><li>Fixed hardware and software issues</li><li>Ensured all IT operations ran smoothly every day</li>',
-        'proj-title': 'Projects',
-        'proj1-name': 'Employee Data System Testing & Implementation',
-        'proj1-desc': 'Group project — testing and implementation of an employee data management system.',
-        'contact-title': 'Contact',
-        'edu-title': 'Education',
-        'edu-name': 'Universitas Insan Pembangunan Indonesia',
-        'edu-major': 'Faculty of Computer Science · Information Systems',
-        'edu-gpa': 'GPA 3.32 / 4.00',
-      }
-    };
-
-    function toggleLang() {
-      isEn = !isEn;
-      const lang = isEn ? 'en' : 'id';
-      document.getElementById('langLabel').textContent = isEn ? 'Indonesia' : 'English';
-      for (const [id, val] of Object.entries(content[lang])) {
-        const el = document.querySelector(`[data-id="${id}"]`);
-        if (el) el.innerHTML = val;
-      }
-    }
-  </script>
-
+  <script src="js/app.js"></script>
 </body>
 </html>
